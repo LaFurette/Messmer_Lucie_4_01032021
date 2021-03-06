@@ -1,5 +1,7 @@
 body {
     width: 100%;
+    max-width: 100%;
+    min-width: 330px;
     margin: 0;
     padding: 0;
     background: #FFF;
@@ -9,6 +11,9 @@ body {
 }
 footer{
     background-color: #F3976C!important;
+}
+blockquote footer {
+    background-color: #fff!important;
 }
 a,
 button {
@@ -23,7 +28,9 @@ a:hover {
 a {
     text-decoration: none;
 }
-
+p {
+    font-size: 1.65rem;
+}
 #page-loading-blocs-notifaction {
     position: fixed;
     top: 0;
@@ -327,9 +334,7 @@ a {
     z-index: 1;
     list-style-type: none;
 }
-.navbar-contact {
-    
-}
+
 .nav > li {
     float: left;
     margin-top: 4px;
@@ -409,6 +414,11 @@ a {
         float: none;
         margin: 10px auto 0;
     }
+    
+    .rowform {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 .nav > li > .dropdown a {
@@ -485,6 +495,7 @@ button {
 
 .icon-md {
     font-size: 30px!important;
+    color: #FFF!important;
 }
 
 .icon-lg {
@@ -516,7 +527,15 @@ button {
 .form-control {
     border-color: rgba(0, 0, 0, .1);
     box-shadow: none;
+    width: 100%;
+    padding: 0.4rem 0 ;
+    font-size: 1rem;
 }
+.form-group {
+    width: 100%;
+    margin-bottom : 1rem ;
+}
+
 
 .scrollToTop {
     width: 40px;
@@ -667,10 +686,6 @@ a {
     margin: auto;
 }
 
-.hero-bloc-text {
-    font-size: 38px;
-}
-
 .hero-bloc-text-sub {
     font-size: 36px;
 }
@@ -688,31 +703,52 @@ a {
 
 
 .tight-width-whitespace {
-    max-width: 600px;
+    max-width: 700px;
     margin: auto auto auto auto;
 }
-
+.img-responsive {
+    width: 100%;
+}
 .h1 {
     font-size: 20px;
     font-family: "Open Sans";
 }
 
 .cta-hero {
-    margin-top: 22px;
-    color: #FFFFFF!important;
+    margin: 22px 0;
+    align-items: center;
+    justify-content: center;
     text-transform: uppercase;
     padding: 12px 28px 12px 28px;
     font-size: 16px;
     font-weight: 700;
+    border: none;
 }
-
+.cta-hero1 {
+    margin: 22px 0;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    padding: 12px 28px 12px 28px;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+}
+.hero-bloc-text {
+    font-size: 30px;
+}
 .social {
-    max-width: 400px;
-    margin: auto auto auto auto;
+    max-width: 600px;
+    display: flex;
+    column-gap: 5rem;
+    padding: 1rem 0;
+    justify-content: center;
+    margin: auto;
 }
 
 h2 {
-    font-size: 22px;
+    font-size: 25px;
     line-height: 1.4em;
 }
 
@@ -744,6 +780,8 @@ h4 {
 
 .white {
     color: #FFFFFF!important;
+    margin: 0;
+    font-size: 1.7rem;
 }
 
 .portfolio-thumb {
@@ -788,11 +826,17 @@ h4 {
     color: #F3976C!important;
     text-align: center;
 }
-.col-sm-12 {
-    width: 100%;
+.col-sm-4p {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    font-weight: bold;
+    justify-content: center;
+}
+.col-sm-4p ul {
+    display: flex;
+    column-gap: 2rem;
+}
+.col-sm-4p li{
+    list-style-type: none;
 }
 .btn-atomic-tangerine {
     background: #F3976C;
@@ -846,6 +890,22 @@ h4 {
 .rowform {
     padding: 0 2rem;
 }
+label {
+    width : 100% ;
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+}
+#contact_mail {
+    text-decoration: underline;
+    font-weight: 600;
+}
+address {
+    margin-top: 1rem;
+    font-style: normal;
+    color: black;
+}
+
 @media (max-width: 1024px) {
     .bloc {
         padding-left: 20px;
@@ -1005,9 +1065,10 @@ h4 {
     }
     .bloc-sm,
     .bloc-md {
-        padding-left: 0;
-        padding-right: 0;
+        padding-left: 5px!important;
+        padding-right: 5px!important;
     }
+    
     .bloc-tile-2 .container,
     .bloc-tile-3 .container,
     .bloc-tile-4 .container,
@@ -1047,8 +1108,31 @@ h4 {
         width: 180px;
         height: 320px;
     }
+    .img-responsive {
+        max-height: 360px;
+        max-width: 360px;
+        object-fit: cover;
+        margin: auto;
+    }
+    article {
+        padding-bottom: 2rem;
+    }
+    .portfolio-row {
+        margin-top: 2rem;
+        margin-bottom: 0;
+    }
 }
-
+@media (max-width : 550px) {
+    .col-sm-4p  {
+        flex-direction: column;
+        align-items: center;
+    }
+    .col-sm-4p ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0.5rem 0;
+    }
+}
 @media (max-width: 400px) {
     .bloc {
         padding-left: 0;
@@ -1060,4 +1144,8 @@ h4 {
     .bloc-mob-center-text {
         text-align: center;
     }
+    body {
+        margin: 0;
+    }
+    
 }

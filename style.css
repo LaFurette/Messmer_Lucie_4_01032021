@@ -1048,10 +1048,6 @@ address {
         float: left;
         margin-left: 10px;
     }
-    .bloc {
-        padding-left: 0;
-        padding-right: 0;
-    }
     .bloc-xxl,
     .bloc-xl,
     .bloc-lg {

@@ -27,7 +27,14 @@ a {
     text-decoration: none;
 }
 p {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+}
+blockquote {
+    color: rgb(0, 0, 150);
+    
+}
+blockquote footer {
+    color: black;
 }
 #page-loading-blocs-notifaction {
     position: fixed;
@@ -689,7 +696,10 @@ a {
     margin: auto auto auto auto;
 }
 
-
+#bloc-5-cta h2{
+    color: white!important;
+    text-shadow: 0.1rem 0.1rem rgb(255, 94, 0)!important;
+}
 
 .tight-width-whitespace {
     max-width: 700px;
